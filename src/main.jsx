@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       domain={domain}
       clientId={clientId}
       //CON ESTA REDIRECCION AL HACER LOGIN AUTH0 REDIRIJE SIEMPRE A LA RUTA DONDE SE ENCONTRABA, SI ESTOY EN /EXPLORE, HAGO LOGIN ME REDIRIGE A DONDE ESTABA, /EXPLORE
-      redirectUri={window.location.origin}
+      authorizationParams={{ redirect_uri: window.location.origin }}
     >
       <App />
     </Auth0Provider>
